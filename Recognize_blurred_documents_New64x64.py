@@ -140,4 +140,5 @@ print("Ploting Model...")
 plot_model(autoencoder, to_file='Enter Your Location!/modelRBDNew64x64.png', show_shapes=True, expand_nested=True, dpi=300)
 print("Plotted Successful.")
 print("All Process Passed Successful!")
-    
+print("Powered by Arya Koureshi")
+###Powered by Arya Koureshi

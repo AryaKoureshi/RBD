@@ -101,8 +101,8 @@ print("Predicting Tests")
 decoded_imgs = autoencoder.predict(x_test)
 print("Predicted Successful.")
 
-n = 15
-plt.figure(figsize=(45, 15))
+n = "Enter number of test data"
+plt.figure(figsize=(3 * n, n))
 for i in range(n):
     # display original
     ax = plt.subplot(3, n, i+1)

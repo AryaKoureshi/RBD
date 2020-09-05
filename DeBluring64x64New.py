@@ -7,11 +7,11 @@ import cv2
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 height, width = 64, 64
 print("Loading Model...")
-MyModel = load_model('D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/modelRBDNew64x64.h5')
+MyModel = load_model('Enter Location!/modelRBDNew64x64.h5')
 MyModel.compile(optimizer=optimizers.Adam(), loss=losses.binary_crossentropy)
 print("Model Loaded.")
 print("loading image...")
-image = cv2.imread('D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/Blurredimage/testblurred.jpg', cv2.IMREAD_GRAYSCALE)
+image = cv2.imread('Enter Location! with File name', cv2.IMREAD_GRAYSCALE)
 print("Image Loaded.")
 heightimg = int(np.shape(image)[0])
 widthimg = int(np.shape(image)[1])
@@ -37,7 +37,7 @@ print("Process completed.")
 
 print("Saving image...")
 MyImage = MyImage.astype(np.float32) * 255
-cv2.imwrite('D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/Blurredimage/predicted.jpg', MyImage)
+cv2.imwrite('Enter Location!/predicted.jpg', MyImage)
 print("Image saved.")
 
 plt.figure(figsize=(2, 2))
@@ -56,3 +56,5 @@ ax.get_yaxis().set_visible(False)
 plt.show()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+print("Powered by Arya Koureshi")
+###Powered by Arya Koureshi

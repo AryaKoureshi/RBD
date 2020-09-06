@@ -13,7 +13,7 @@ height = 64
 
 print("Importing Data...")
 
-image_xtrain_path = "D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/Xtrain/"
+image_xtrain_path = "X_Train data location (with '/')(64x64!)"
 xtrain_images = glob.glob(image_xtrain_path + "*.jpg")
 xtrain_images.sort()
 
@@ -23,7 +23,7 @@ for img in xtrain_images:
    image = image.astype(np.float32) / 255
    x_train.append(image)
 
-image_ytrain_path = "D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/Ytrain/"
+image_ytrain_path = "Y_Train data location (with '/')(64x64!)"
 ytrain_images = glob.glob(image_ytrain_path + "*.jpg")
 ytrain_images.sort()
 
@@ -34,7 +34,7 @@ for img in ytrain_images:
    y_train.append(image)
 
 # # # Loading test data
-image_xtest_path = "D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/Xtest/"
+image_xtest_path = "X_Test data location (with '/')(64x64!)"
 xtest_images = glob.glob(image_xtest_path + "*.jpg")
 xtest_images.sort()
 
@@ -44,7 +44,7 @@ for img in xtest_images:
    image = image.astype(np.float32) / 255
    x_test.append(image)
  
-image_ytest_path = "D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/Ytest/"
+image_ytest_path = "Y_Test data location (with '/')(64x64!)"
 ytest_images = glob.glob(image_ytest_path + "*.jpg")
 ytest_images.sort()
 
@@ -70,7 +70,7 @@ print("Prepared Successful.")
 # #::::::::::::::::::::::::::::::::::::::::
 # # Create Layers and Model
 print("Crating Model...")
-autoencoder = load_model('D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/modelRBDNew64x64.h5')
+autoencoder = load_model('Enter Location!/modelRBDNew64x64.h5')
 autoencoder.compile(optimizer=optimizers.Adam(learning_rate=0.0005), loss=losses.binary_crossentropy, metrics=['acc'])
 print("Model Created and Compiled.")
 #:::::::::::::::::::::::::::::::::::::::::::
@@ -84,7 +84,7 @@ autoencoder.fit(x_train, y_train,
                 validation_split=0.15)
 #Save trained model
 print("Saving Trained Model...")
-autoencoder.save('D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/modelRBDNew64x64.h5')
+autoencoder.save('Enter Location!/modelRBDNew64x64.h5')
 print("Saved Successful.")
 #::::::::::::::::::::::::::::::::::::::::::
 # Predict and Visualization
@@ -96,7 +96,7 @@ print("Predicted Successful.")
 print("Saving Predicted Images...")
 for i in range(len(decoded_imgs)):
     decoded_imgs[i] = decoded_imgs[i].astype(np.float32) * 255
-    cv2.imwrite('D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/PredictedNew64x64/{}.jpg'.format(i), decoded_imgs[i])
+    cv2.imwrite('Enter Location!/{}.jpg'.format(i), decoded_imgs[i])
 print("Images Saved Successful.")
 #::::::::::::::::::::::::::::::::::
 n = 15
@@ -128,7 +128,7 @@ cv2.destroyAllWindows()
 #::::::::::::::::::::::::::::::::::::::::::::
 # Plot model
 print("Ploting Model...")
-plot_model(autoencoder, to_file='D:/Files/ProgrammingLessons/python/RecognizingBlurredDocuments/modelRBDNew64x64.png', show_shapes=True, expand_nested=True, dpi=300)
+plot_model(autoencoder, to_file='Enter Location!/modelRBDNew64x64.png', show_shapes=True, expand_nested=True, dpi=300)
 print("Plotted Successful.")
 print("All Process Passed Successful!")
     

@@ -11,7 +11,14 @@ The model is an autoencoder convolutional network created by Keras in Python usi
 
 # Model
 #### modelRBDNew64x64.h5
-<img src="modelRBDNew64x64.png" width="540" height="960">
+<p align='center'>
+  <img src="modelRBDNew64x64.png" width="30%">
+</p>
 
 # Results
+<p align='center'>
+<img src="sample1.jpg" width="80%">
+  
+<img src="sample2.jpg" width="80%">
+</p>
 

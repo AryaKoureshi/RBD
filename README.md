@@ -10,7 +10,7 @@ The model is an autoencoder convolutional network created by Keras in Python usi
 [Linkedin](https://www.linkedin.com/posts/arya-koureshi_deeplearning-python-tensorflow-activity-6707914099294003201-5eM2)
 
 # Model
-#### modelRBDNew64x64.h5
+#### [modelRBDNew64x64.h5](modelRBDNew64x64.h5)
 <p align='center'>
   <img src="modelRBDNew64x64.png" width="30%">
 </p>
